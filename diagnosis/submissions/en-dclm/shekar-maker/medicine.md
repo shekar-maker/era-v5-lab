@@ -1,12 +1,15 @@
 # Medicine sheet: en-dclm (shekar-maker)
 
-Pack: `en-dclm`, 500 English documents from DCLM-baseline 1.0 (filtered). Rows read so far: 150
-(28 clean / 94 fix / 28 drop). Counts below are from those 150 rows and will be updated when all 500 are in.
+Pack: `en-dclm`, 500 English documents from DCLM-baseline 1.0 (filtered). All 500 rows are labelled
+(65 clean / 349 fix / 86 drop). Counts below are from `labels.csv`.
 
-Diseases found more than five times: C1 (101), C5 (20), C3 (19), B4 (13), C2 (11), D3 (10), A1 (10), C4 (7), A3 (7), F1 (6).
+Diseases found more than five times: C1 (386), C3 (98), C5 (61), C2 (30), D3 (24), B4 (23), D4 (18), C4 (16),
+A1 (12), F1 (8), H3 (7), A3 (7). Eight have a regex medicine below; D3, D4, C4 and H3 have none and are
+explained in the last section. Found five times or fewer (no medicine required): F3 3, B5 3, A6 3, A2 3,
+B2 2, F2 1, D5 1, A4 1, B1 1.
 
 **Harm test status.** The English gold set has not been released yet. Until it is, every medicine was run on a
-*proxy* gold set: the 28 documents of this pack that I marked `clean`. The table in "Harm test summary" gives
+*proxy* gold set: the 65 documents of this pack that I marked `clean`. The table in "Harm test summary" gives
 both the proxy result and the effect of each medicine on the whole 500-document pack. The real gold-set numbers
 will replace the proxy numbers as soon as the Data A/B team shares the set; the code is written so that
 `python medicines.py en-dclm.parquet --gold <gold.parquet>` produces them in one run.
@@ -17,7 +20,7 @@ Medicines are given as Python. Each takes the document text and returns `(new_te
 
 ## Medicine 1: A1 invisible junk characters
 
-1. **Disease:** A1, 10 documents. Examples: `4a22b0cbca7869fc` BOM `U+FEFF` at offset 0; `9f004914c20a592b` three
+1. **Disease:** A1, 12 documents. Examples: `4a22b0cbca7869fc` BOM `U+FEFF` at offset 0; `9f004914c20a592b` three
    BOMs `U+FEFF U+FEFF U+FEFF` at offset 0; `855032b92c2b8d25` soft hyphens `U+00AD` at offsets 161, 185, 527, 550
    (`ge­sprochen`); `f4e27249dc2787fc` LRE `U+202A` at offset 90; `11c3cd0e50856c3e` ZWSP `U+200B` at offset 0.
 2. **Medicine:** delete ZWSP, BOM, soft hyphen and the bidi embedding/isolate marks. Keep ZWJ/ZWNJ.
@@ -26,7 +29,7 @@ Medicines are given as Python. Each takes the document text and returns `(new_te
    def m_a1(text): return A1_RE.sub("", text), False
    ```
 3. **Action:** fix.
-4. **Harm test:** proxy gold 0/28 changed, 0 dropped. Whole pack: 10 changed, 0 dropped.
+4. **Harm test:** proxy gold 0/65 changed, 0 dropped. Whole pack: 10 changed, 0 dropped.
 5. **Side effects:** a soft hyphen that a typesetter placed on purpose is deleted too, which joins the word
    correctly (`never­ending` → `neverending`), so no damage. Bidi marks in genuinely mixed-direction text (Arabic
    or Hebrew quotes inside English) would be lost; none in this pack. The medicine does not touch U+200C/U+200D.
@@ -47,7 +50,7 @@ Medicines are given as Python. Each takes the document text and returns `(new_te
        return new, len(A3_RE.findall(new)) * 1000 / max(len(new), 1) > 1.0
    ```
 3. **Action:** fix; drop when unrepairable.
-4. **Harm test:** proxy gold 0/28 changed, 0 dropped. Whole pack: 4 changed, 0 dropped.
+4. **Harm test:** proxy gold 0/65 changed, 0 dropped. Whole pack: 4 changed, 0 dropped.
 5. **Side effects:** the signature regex misses mojibake that went through a non-UTF-8 round trip, for example
    Cyrillic `й` standing in for `é` (`Pokйmon` in `68575a61a90990d5`, `Diffйrents` in `467b5c0aa1d13de8`) and
    symbol-font gibberish (`3dc93ffbd87ba839`): 3 of the 7 labelled documents are not touched. `ftfy` can in rare
@@ -56,7 +59,7 @@ Medicines are given as Python. Each takes the document text and returns `(new_te
 
 ## Medicine 3: B4 template and code junk in prose
 
-1. **Disease:** B4, 13 documents. Examples: `e3fba14beec00b2b` tracking JS `fbq('track', 'ViewContent');` at offset
+1. **Disease:** B4, 23 documents. Examples: `e3fba14beec00b2b` tracking JS `fbq('track', 'ViewContent');` at offset
    0; `6da64e1f3aa0f61c` image alt residue `dougball.gif - 0.95 K` 18 times from offset 40315; `b0b8c0fe32cb4bee`
    filename `bigstock--191940913.jpg` glued to the first word at offset 126; `6d42edb6050b961a` template bug
    `WRITTEN BY Home Upgrades That Can Save You Money` at offset 39.
@@ -72,14 +75,14 @@ Medicines are given as Python. Each takes the document text and returns `(new_te
        return re.sub(r"[ \t]{2,}", " ", new) if new != text else text, False
    ```
 3. **Action:** fix.
-4. **Harm test:** proxy gold 0/28 changed, 0 dropped. Whole pack: 8 changed, 0 dropped.
-5. **Side effects:** recall is low (2 of 13 labelled documents): most B4 in this pack is placeholder text glued
+4. **Harm test:** proxy gold 0/65 changed, 0 dropped. Whole pack: 8 changed, 0 dropped.
+5. **Side effects:** recall is low (2 of 23 labelled documents): most B4 in this pack is placeholder text glued
    into words (`holder maleChase`, `Lance-Earl-Ladn-C-trucsLance`) or an unrendered theme string, which no regex can
    separate from prose. A tutorial that legitimately names `image.png` loses that filename.
 
 ## Medicine 4: C1 boilerplate
 
-1. **Disease:** C1, 101 documents (the most common disease: 2 of every 3 documents). Examples: `a6673336e37d2ca9`
+1. **Disease:** C1, 386 documents (the most common disease: 77% of the pack). Examples: `a6673336e37d2ca9`
    breadcrumb `You are here: Home >` at offset 0 and `Related Links:` at 10208; `0864734353e1b73e` `YOU ARE HERE:
    LAT HomeCollections` at 0 and `Los Angeles Times Articles` at 4980; `80c9139ec8b57301` `Post a Comment` 9 times
    and `No comments :` 6 times; `401400b4e5ef2ee8` `Skip to: Site Menu | Main content` at 63.
@@ -96,8 +99,8 @@ Medicines are given as Python. Each takes the document text and returns `(new_te
        return re.sub(r"\n{3,}", "\n\n", "\n".join(keep)), False
    ```
 3. **Action:** fix.
-4. **Harm test:** proxy gold 0/28 changed, 0 dropped. Whole pack: 117 changed, 0 dropped.
-5. **Side effects:** the rule only matches a line that *starts* with a chrome phrase, so it reaches 37 of the 101
+4. **Harm test:** proxy gold 0/65 changed, 0 dropped. Whole pack: 117 changed, 0 dropped.
+5. **Side effects:** the rule only matches a line that *starts* with a chrome phrase, so it reaches 117 of the 386
    labelled documents; the rest are repeated titles, nav bars like `Contents | < Browse | Browse >`, forum
    headers `Author Topic: ... (Read 289 times)` and comment chrome glued to prose with NBSP. A line of real prose
    that starts with "Register" or "Subscribe" (an instruction in an article) is deleted. A sentence that happens to
@@ -105,7 +108,7 @@ Medicines are given as Python. Each takes the document text and returns `(new_te
 
 ## Medicine 5: C2 repeated lines
 
-1. **Disease:** C2, 11 documents. Examples: `50d363e8b8340b11` `never quiet, never soft.....` 21 times from offset
+1. **Disease:** C2, 30 documents. Examples: `50d363e8b8340b11` `never quiet, never soft.....` 21 times from offset
    2715; `8fa9168e8da3a2d4` `Individual Eyelashes Extensions` as a line 4 times at 180; `a874cd0a1d145148` title
    `Maintenance Bond` 3 times at 14/141/194; `e2f62269aa2a0900` caption `borrowed with permission from ...` 3 times.
 2. **Medicine:** a line of 20+ characters that appears 3 or more times is kept once; if the repeated lines are more
@@ -127,36 +130,42 @@ Medicines are given as Python. Each takes the document text and returns `(new_te
        return "\n".join(out), False
    ```
 3. **Action:** fix; drop when the document is mostly repetition.
-4. **Harm test:** proxy gold 0/28 changed, 0 dropped. Whole pack: 8 changed, 0 dropped.
+4. **Harm test:** proxy gold 0/65 changed, 0 dropped. Whole pack: 8 changed, 0 dropped.
 5. **Side effects:** a refrain in a poem or song, a repeated stage direction in a play, or a repeated table header
    is collapsed to one copy. Short repeated lines (under 20 characters, e.g. `Post a Comment`) are left to Medicine 4.
 
 ## Medicine 6: C3 truncated document
 
-1. **Disease:** C3, 19 documents. Examples: `cd0ef2540a4ee803` teaser cut with `...` at offset 317; `8b697f9f7d91de38`
+1. **Disease:** C3, 98 documents. Examples: `cd0ef2540a4ee803` teaser cut with `...` at offset 317; `8b697f9f7d91de38`
    ends mid-sentence `I think that you will be` at 2680; `a1b97fd910707a8d` sentence cut where link text was stripped
    `I can't even find a link from` at 4095; `089fde49e557cc5d` ends with the heading `Female Problems` and no body.
 2. **Medicine:** only the *stub* form is treated. A document of at most 600 characters whose last word is one no
-   sentence ends on (`from`, `the`, `and`, ...) or that ends with a teaser `...` is dropped.
+   sentence ends on (`from`, `the`, `and`, ...) or that ends with a teaser `...` is dropped (the dangling-word test only applies when the text has no
+   terminal punctuation).
    ```python
    DANGLING = set("a an the and or but of to in on at by for from with as that which who will would can could is are was were be been being has have had this these those its their his her my our your".split())
    def m_c3(text, max_len=600):
        body = text.rstrip()
        if len(body) > max_len: return text, False
        last = (re.findall(r"[A-Za-z']+", body) or [""])[-1].lower()
-       return text, bool(body.endswith(("...", "…", "[...]", "(more)")) or last in DANGLING)
+       teaser = body.endswith(("...", "…", "[...]", "[…]", "(more)", "Read more"))
+       unfinished = body[-1] not in ".!?\"')]}»”’:;" and last in DANGLING
+       return text, bool(teaser or unfinished)
    ```
 3. **Action:** drop (stubs only); longer truncated documents are labelled, not cut.
-4. **Harm test:** proxy gold 0/28 changed, 0 dropped. Whole pack: 0 changed, 2 dropped.
+4. **Harm test:** proxy gold 0/65 changed, 0 dropped. Whole pack: 0 changed, 1 dropped.
 5. **Side effects:** my first version trimmed any last line without terminal punctuation; it changed 5 of the 28
-   proxy-gold documents (complete sentences that simply lack a full stop), so it was withdrawn. The stub rule
-   catches none of the 19 labelled documents, because in this pack C3 is mostly mid-text gaps where a link, a
-   citation or an email was stripped by an earlier cleaner. There is no safe regex for that; it is the main
-   finding of this slice for the pipeline team: the HTML-to-text step drops anchor text.
+   documents then in the proxy set (complete sentences that simply lack a full stop), so it was withdrawn. The
+   stub rule's dangling-word test then dropped a clean 560-character document ending `...what research impact is.`,
+   which failed the 1% limit on the 65-document proxy; it now applies only when the text has no terminal
+   punctuation. The rule catches 1 of the 98 labelled documents, because in this pack C3 is mostly mid-text gaps
+   where a link, a citation, a quote or an image was stripped by an earlier cleaner (the readers' notes say most C3 rows are of this kind, not end-of-document cuts).
+   There is no safe regex for that; it is the main finding of this slice for the pipeline team: the
+   HTML-to-text step drops anchor text and embedded content.
 
 ## Medicine 7: C5 keyword lists and SEO spam
 
-1. **Disease:** C5, 20 documents (18 of them `drop`). Examples: `c64a732a64b1ce8b` `teknik forex tf h1` injected
+1. **Disease:** C5, 61 documents. Examples: `c64a732a64b1ce8b` `teknik forex tf h1` injected
    at offsets 44, 6858 and throughout random textbook sentences; `d7d9f2c89773b700` Korean casino keywords
    `온라인카지노` injected mid-sentence at 2801, 5424, 8201; `a381d9217f39570e` `cheap michael kors handbags` at 93;
    `ba893cf355e53633` spun word salad `be sure to seems to cost` from offset 147.
@@ -176,18 +185,18 @@ Medicines are given as Python. Each takes the document text and returns `(new_te
        return text, bool(spam or len(INJECT_RE.findall(text)) >= 2)
    ```
 3. **Action:** drop.
-4. **Harm test:** proxy gold 0/28 changed, 0 dropped. Whole pack: 0 changed, 8 dropped.
+4. **Harm test:** proxy gold 0/65 changed, 0 dropped. Whole pack: 0 changed, 8 dropped.
 5. **Side effects:** precision was bought with recall. A looser version (4 repeats, 2 content words, any
    non-Latin share under 5%) dropped 44 documents in the pack but also a clean student-union article (`a U-Pass
    program` 5 times) and a legitimate bilingual Chinese-English dictionary page, so it was tightened. The tight
-   rule catches 1 of the 20 labelled documents: most C5 here is *spun* English (`be sure to seems to cost`) or
+   rule catches 7 of the 61 labelled documents: most C5 here is *spun* English (`be sure to seems to cost`) or
    glued textbook sentences, which read as ordinary words to a regex. Those need a language-model perplexity or
    a repetition-of-rare-n-grams filter at the pipeline level, not a line rule. A product review that names the
    product in four content words six or more times (`sony alpha 7 iii`) would be dropped.
 
 ## Medicine 8: F1 personal data
 
-1. **Disease:** F1, 6 documents. Examples (type and position only): `71f25549c2c4200d` email at offset 2436;
+1. **Disease:** F1, 8 documents. Examples (type and position only): `71f25549c2c4200d` email at offset 2436;
    `416e12ac72df0b07` emails at offsets 669, 964, 2192; `e5d949484740fff3` PO box at 8031, email at 8120, phone at
    8155; `c3ff48f35f98745c` phone at offset 8567.
 2. **Medicine:** replace with a placeholder. An email is redacted when its shape is personal (first.last, digits,
@@ -204,24 +213,32 @@ Medicines are given as Python. Each takes the document text and returns `(new_te
        return PHONE_RE.sub("[PHONE]", new), False
    ```
 3. **Action:** fix (redact in place).
-4. **Harm test:** proxy gold 0/28 changed, 0 dropped. Whole pack: 13 changed, 0 dropped.
+4. **Harm test:** proxy gold 0/65 changed, 0 dropped. Whole pack: 13 changed, 0 dropped.
 5. **Side effects:** the shape rule is a guess about who is private: a person with a one-word mailbox at their own
    domain is not redacted, and a company address like `sales.team@...` is. Business phone numbers (restaurants,
    banks, a shop) are redacted although they are public; the readers chose not to label those F1. The phone
    regex matches 10-digit groups only; UK/EU formats and numbers written without separators pass through. Postal
    addresses and PO boxes are not handled.
 
-## No medicine: D3 mixed language (10) and C4 two documents joined (7)
+## No medicine: D3 (24), D4 (18), C4 (16), H3 (7)
 
-D3 is labelled, not judged (DISEASES.md section 2, group D): the Urdu, Hindi, German and Spanish code-switching
-in this pack is natural writing, so there is no medicine. C4 has no safe regex: a topic boundary is invisible to
-a pattern, and 6 of the 7 C4 documents are also C5 spam that Medicine 7 or a perplexity filter should remove.
+- **D3 mixed language (24):** labelled, not judged (DISEASES.md, group D). The Urdu, Hindi, German, Spanish and
+  Portuguese code-switching and bilingual page shells in this pack are mostly natural, so there is no medicine.
+- **D4 bad machine translation (18):** nearly all are *spun* text (`suches as`, `they can cost not cheap`,
+  `alcoholic beverages alcoholic beverage`, e.g. `e1d3971ca464902c`, `a85d5ac50a23111d`). There is no regex for
+  grammar damage; a language-model perplexity filter would catch it, and most of these are also C5 so Medicine 7
+  or that filter removes them.
+- **C4 two documents joined (16):** no safe regex; a topic boundary is invisible to a pattern. Most C4 documents are
+  also C5 spam.
+- **H3 same content elsewhere (7):** Wikipedia reposts and wire stories (e.g. `e22858e9e5d594cd`, a Wikipedia
+  biography; `c84f362725cdf249`, an AP story). Detecting them needs the other sources (a Wikipedia dump, a news
+  corpus) to hash against; one pack cannot do it, so this is a cross-source dedup job for the pipeline.
 
 ---
 
 ## Harm test summary
 
-Proxy gold = the 28 documents marked `clean` in `labels.csv`. Pass = changed + dropped ≤ 1% of the gold set.
+Proxy gold = the 65 documents marked `clean` in `labels.csv`. Pass = changed + dropped ≤ 1% of the gold set.
 To be re-run on the real English gold set when it is released.
 
 | Medicine | Pack: changed | Pack: dropped | Proxy gold: changed | Proxy gold: dropped | Result |
@@ -231,11 +248,11 @@ To be re-run on the real English gold set when it is released.
 | B4 template residue | 8 | 0 | 0 | 0 | pass |
 | C1 boilerplate lines | 117 | 0 | 0 | 0 | pass |
 | C2 repeated lines | 8 | 0 | 0 | 0 | pass |
-| C3 truncated stubs | 0 | 2 | 0 | 0 | pass |
+| C3 truncated stubs | 0 | 1 | 0 | 0 | pass |
 | C5 keyword spam | 0 | 8 | 0 | 0 | pass |
 | F1 personal data | 13 | 0 | 0 | 0 | pass |
 
 Recall against my own labels (of the documents I labelled with the code, how many the medicine touches):
-A1 10/10, F1 6/6, C2 7/11, A3 4/7, C1 37/101, B4 2/13, C5 1/20, C3 0/19. The low numbers are deliberate: each
+A1 10/12, F1 6/8, A3 4/7, C1 117/386, C2 7/30, C5 7/61, B4 2/23, C3 1/98. The low numbers are deliberate: each
 rule was tightened until it left the proxy gold set alone, and what it then misses (spun prose, stripped link
 text, placeholder text glued into words) is not a regex problem.

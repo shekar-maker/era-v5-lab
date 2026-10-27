@@ -301,201 +301,201 @@ e369350285bec7b9,full,drop,C1;C4;C5,"'No view' at offset 36; sentences from unre
 b945580dc8e84cdb,full,fix,C1;C3,'29 Comments Posted' at offset 2722; 'Comments are closed.' at 47074; stripped links '[eg here]' at 15310 and 'url=' with URL removed at 22601,,"NZ Green MP blog post on Northland plus 26 numbered comments (no. 21 missing); ideographic space U+3000 at 1430 noted, treated like NBSP"
 9d0510d907e8b9f6,full,fix,C1,"'Wednesday, November 30' at offset 2; 'By Janice Hardy' byline with social handle at offset 27",,"writing-craft blog post with 13 reader comments; date header and author byline carrying a social handle (public author, not F1)"
 cf1eddabedccbf9e,full,fix,C1;C3,'I’d set\n\n\nin /boot/config.txt' at offset 681; 'I’ve found this one which might just fit in' at offset 1348; 'Leave a Reply' at offset 1564,,"Raspberry Pi drone build log; config snippet stripped mid-sentence, link text stripped, reply footer"
-f91d85972e923265,,,,,,
-0a2044cdb25c665f,,,,,,
-6f8a930fbc36262a,,,,,,
-c6f44b0add5cf105,,,,,,
-1f7822e59cd4521f,,,,,,
-9e45034e3eba9669,,,,,,
-f8abf7a9d8332d0e,,,,,,
-78291034f6ea471f,,,,,,
-8a018c712ce8f362,,,,,,
-a912fdfed31a4b04,,,,,,
-de26498db4881321,,,,,,
-a02c10c9afa1d01d,,,,,,
-84b8f1f258f66be6,,,,,,
-f690ed7d88d07eda,,,,,,
+f91d85972e923265,full,drop,C1;C3,'Read the rest of this entry' teaser at offset 362,,Blog teaser stub: 2 paragraphs then 'Read the rest of this entry'; code listing missing
+0a2044cdb25c665f,full,fix,C1;C5,Leave a Reply 'Leave a Reply' at offset 4930; spam-like comment names 'wohnung verkaufen' at offset 4747,,IT automation article; ends with commenter-name list incl. foreign spam keywords and comment form
+6f8a930fbc36262a,full,fix,C1;C3,embed/quote stripped before 'and will be launched in Parliament' at offset 375; caption-like line 'The Jews are historically connected' at offset 2318,,"Op-ed on Balfour apology campaign; quoted passages stripped mid-text (C3 mid-text), stray line merged"
+c6f44b0add5cf105,full,fix,C1,date header at offset 0; 'No comments:/Post a Comment' at offset 20212; image caption merged into prose at offset 2226,,"Long historical-archaeology blog post; date header, image captions and comment footer to strip"
+1f7822e59cd4521f,full,fix,C1,"date header 'Tuesday, October 10, 2006' at offset 0; comment chrome 'No comments:' at offset 3350",,Personal blog post about dissidents/prison; date header and comment footer
+9e45034e3eba9669,full,fix,C1,header 'via paloma81' at offset 20; footer 'Popular Posts' at offset 2487,,"Personal blog essay on pay inequality; header byline and ""Popular Posts"" footer"
+f8abf7a9d8332d0e,full,fix,C1,'via Pinterest' image credit at offset 27; 'Popular Posts' widget header at offset 3894,,Fashion blog listicle; image credit at top and trailing sidebar header
+78291034f6ea471f,full,fix,C1;C3,"affiliate CTA 'Click here for recommended' at offset 42; empty heading, content stripped 'How does Benefil compare?' at offset 2847; CTA 'Click for Benefil Results.' at offset 2909",,Affiliate-style product review; empty final section and link CTAs
+8a018c712ce8f362,full,fix,C3;C1,quote stripped 'J. M. Korhonen on blockchain:' at offset 3808; ends after attribution 'Stephen Cass:' at offset 11983; series heading 'Quotes of the Week 026' at offset 3840,,"Telecom quotes digest; several quotes stripped (C3 mid-text) and doc ends on ""Stephen Cass:"" (C3 end)"
+a912fdfed31a4b04,full,fix,C1;C3,date header at offset 0; 'No comments:/Post a Comment' at offset 1457; post breaks off after 'will take some thought' at offset 1278,,Short blog teaser that stops where the story should start (C3 = end truncation); profanity not F3
+de26498db4881321,full,clean,,,,Short news blurb on food-donation campaign; reads whole but opens without headline (unsure)
+a02c10c9afa1d01d,full,fix,C1;C3,"date header 'Thursday, July 03, 2008' at offset 0; comment chrome 'Kami said...' at offset 78; post body missing after title 'Does It Have To Be?' at offset 25",,"Martial-arts blog comment thread; post body absent (C3), comments chrome; profanity only"
+84b8f1f258f66be6,full,drop,C5;D4,"spun synonym text, local-SEO closer at offset 4746; broken list lead-in 'issues like:.' at offset 3475",,"Spun chiropractic-in-pregnancy SEO article ('toddler', 'aspiring moms', 'telephone call'); odd wording throughout"
+f690ed7d88d07eda,full,fix,C5;C1,spam product-key line inside prose 'Camtasia Studio 8' at offset 458; end plug 'If you enjoyed this post' at offset 11014; link line 'Follow up: Should we erase' at offset 10972,,"Philosophy essay on memory deletion; injected software-spam lines in the middle, link/book footer"
 2e3f058c9b3f0f55,full,fix,C1,'1 comment:' at offset 55; post body missing between title and comment,,"blog post on a readability metric; body (image/formula) absent, only one comment remains; C3? rejected, comment ends naturally"
-0631055fcc9352f3,,,,,,
-583cb5a2a10559a7,,,,,,
-fd08c3a86db486c1,,,,,,
-a8693d9788af17cf,,,,,,
-4eeed8740f4b762b,,,,,,
-0b6d3f138a3faac0,,,,,,
-e215ee3ba5df3c0c,,,,,,
-e2731d08b36ad4ff,,,,,,
-0591ffc2571e313d,,,,,,
-e576208caa1d94a1,,,,,,
-7ecdf57b3e06fd56,,,,,,
-c2bf8f8ce9662fed,,,,,,
+0631055fcc9352f3,full,fix,C1,"date header 'Jun 26, 2014' at offset 0; image caption 'My cat Molly on the balcony' at offset 1464",,"Personal blog post; date header, image captions merged into prose"
+583cb5a2a10559a7,full,drop,C1,'Creators View all' widget at offset 496,,"Comic catalogue listing (specs + blurb + creator table); product-page stub, no real prose"
+fd08c3a86db486c1,full,fix,C1;C3,nav 'Return to News' at offset 0; link text stripped 'Full details are explained here.' at offset 3164; stub tail 'key stats' at offset 3413,,"COSMIC database release note; nav header, stripped links, ends with stray ""key stats"""
+a8693d9788af17cf,full,clean,,,,Short opinion column on TV and the writers strike; no boilerplate found
+4eeed8740f4b762b,full,drop,C1,'Footer Image' at offset 279; empty 'Referring Clues:' at offset 80,,Crossword-answer database stub page with empty clue list and footer chrome
+0b6d3f138a3faac0,full,fix,C1;C3,"date header 'Monday, January 7, 2013' at offset 0; link text stripped (store name missing) 'from a place called' at offset 2866; comment chrome 'klbexplores said...' at offset 3612",,Personal blog on buying a laptop; comments appended; one sentence cut where link was stripped
+e215ee3ba5df3c0c,full,fix,C1,promo CTA 'Or upgrade' at offset 3594; promo CTA 'Try Datanamic SchemaDiff for PostgreSQL for free' at offset 3736; nav remnant 'Save with Bundles' at offset 3870,,"Software product page (feature list, price); CTA and nav remnants; business pricing only"
+e2731d08b36ad4ff,full,drop,C5;C1;D4,injected place keyword after intro at offset 376; '0 votes' Q&A chrome at offset 58; spam answer comments at offset 4246,,"Spun plumbing article ('liquid' for water) with injected keyword, plus two spam comments in Q&A widget"
+0591ffc2571e313d,full,drop,C3,"teaser only, ends after intro 'Tim Cook' at offset 189",,Two-sentence teaser of a news headline/intro; no body
+e576208caa1d94a1,full,fix,C1,comment chrome '1. I feel like I could' at offset 1315; empty comment slot '5. Kudos Kiddo' at offset 1593,,Interior design blog post with numbered comments (item 4 missing)
+7ecdf57b3e06fd56,full,drop,C5;C1;D4,ad placeholder 'Google Adsense Here' at offset 23; title repeated at end at offset 5208,,Spun boots SEO text (nonsense word substitutions) with ad placeholders; title repeated
+c2bf8f8ce9662fed,full,fix,C1;C3,"leftover module list 'feeds. tamper' at offset 428; ends on ""See also:"" 'See also:' at offset 459",,"Drupal Feeds talk blurb; residual link labels and ends with ""See also:"""
 8f000081acb6e99f,full,clean,,,,"D&D 3.5 NPC wiki entry (Ghared, duergar) with stat block; C3? rejected, '10 bolts' is the final list item"
-c1ca027a5a692749,,,,,,
-3b5bd621f2a52d15,,,,,,
-31f20bb57940c2f4,,,,,,
-141fffad19cc9fb0,,,,,,
-b47b53c1fe830172,,,,,,
-e8b4496b49074870,,,,,,
-ce2379b57ec14f48,,,,,,
-e448c34826f5e045,,,,,,
-e0c0d902e4cf51f5,,,,,,
-97e19ff787c65155,,,,,,
-c0e81fc18ab214b9,,,,,,
-aa0b27b1512332c2,,,,,,
-850889ced1373769,,,,,,
-887b42b5ad6bb08e,,,,,,
-cab2dbea05fa92b7,,,,,,
-e669641575ec2ed5,,,,,,
-f2a65eb96f112396,,,,,,
-d9f493749079bf86,,,,,,
-70e9a381a17a513a,,,,,,
+c1ca027a5a692749,full,drop,C5;D4;A6;D3;C1,Cyrillic in French 'Mкme' at offset 500; Cyrillic in French 'йvite' at offset 2339; spun keyword 'itt technical institute accreditation' at offset 559; French fragment 'Je ne me suis jamais' at offset 2801; fake comments '20.01.2013 at 04:41 Toktilar' at offset 6662,U+043A;U+0439,"SEO spun finance spam with keyword stuffing, French with Cyrillic lookalikes, fake comment list"
+3b5bd621f2a52d15,full,drop,C1;C4;C5;D3;F1,Chinese course notice title at offset 0; ICQ number at offset 137; Skype handle at offset 158; spam comments header at offset 32; spam link text at offset 1220,,"Chinese course-notice page title and TA name, then 3 English spam comments (SEO/cab/random); F1 low-confidence (spam contact IDs)"
+31f20bb57940c2f4,full,fix,C1,"date header 'March 20, 2010' at offset 0; comment chrome '1 comment:' at offset 369",,Tiny blog post; author phone number is partially masked (not counted as F1); date/comment chrome
+141fffad19cc9fb0,full,fix,C1,"date header 'Sunday, June 23, 2013' at offset 0; comment chrome 'Nice find Ellie' at offset 940; link text left '(click here)' at offset 224",,Voynich blog post with numbered comments
+b47b53c1fe830172,full,fix,C1,comment chrome 'fangz said...' at offset 661; comment-spam petition at offset 896,,Malaysian political-rally blog post with inline comments and a spam petition comment; natural Manglish
+e8b4496b49074870,full,fix,C1;C2,footer '(c) EENI- Business School' at offset 4916; slide heading repeated 'Hispano-African University of Internatio' at offset 1806; repeat 'Hispano-African University of Internatio' at offset 1860; heading repeated later 'Mano River Union' at offset 3983,,Business-school course syllabus/slide outline; repeated slide headings and footer
+ce2379b57ec14f48,full,fix,C1,ad header 'Melt Away Stubborn Fat' at offset 0; widget 'Psalm for the Day' at offset 111; footer 'No comments:' at offset 4666,,"Spiritual-growth essay under ad/widget header; words run together at line joins (""wellas"")"
+e448c34826f5e045,full,fix,C1;C3,"quote stripped, ends 'in one of his speeches said' at offset 8754; 'Share Button' at offset 11753; 'Posted by on ... Filed under' at offset 11766",,"Ethiopian diaspora opinion essay; Lutuli quote missing mid-text (C3 mid-text), footer chrome; political opinion not F3"
+e0c0d902e4cf51f5,full,fix,C1,comment form 'Leave a Reply' at offset 2864,,Parenting article on praise; trailing comment form
+97e19ff787c65155,full,fix,C1,"date header 'Friday, August 14, 2015' at offset 0",,Chrono Trigger blog post; date header only; author notes the missing spaces himself
+c0e81fc18ab214b9,full,drop,C3;C5,sentence with dropped link 'ways at to organize' at offset 38; headings-only numbered list at offset 109,,"Stub listicle: only 20 headings, link text removed; no body content"
+aa0b27b1512332c2,full,fix,C1,"date header 'Tuesday, August 27, 2013' at offset 0; widget 'Blog Widget by LinkWithin' at offset 1403",,Two short mom-blog posts joined under date headers; widget footer
+850889ced1373769,full,drop,C5;C4;D4;C1,nav 'Back to list of posts' at offset 55; comment chrome 'Add a New Comment' at offset 5504; topic jump 'Design a beard for Santa' at offset 2766; topic jump 'On the day of the race' at offset 3307,,"Spun SEO article stitching unrelated sentences (compression wear, Santa beard, BMX, acne)"
+887b42b5ad6bb08e,full,fix,C1;C3,date header at offset 0; lead-in 'Here are some Health Fitness Tips:' followed by blanks at offset 138,,"Blog post: health-tips list and image content stripped (C3 mid-text), then a beauty essay; grammar rough"
+cab2dbea05fa92b7,full,fix,C1,stray duplicated fragment line 'of his absolute' at offset 8001; comment footer 'Add a New Comment' at offset 23809; roleplay header block 'Who J' at offset 0,,"Long fan roleplay log; metadata header, stray fragment line, comment footer; profanity/mild sexual content only"
+e669641575ec2ed5,full,fix,C1,forum chrome 'Live forum:' at offset 40; timestamp '12-12-2007 15:33:04' at offset 54,,Tiny forum post about a promo; header and timestamp chrome
+f2a65eb96f112396,full,fix,C1,date header at offset 0,,Horror-author blog memoir on a con; crude jokes not F3; names are public authors/friends; date header only
+d9f493749079bf86,full,fix,C1,"date header 'Thursday, August 27, 2009' at offset 0; comments 'Anonymous said...' at offset 668",,Local-news blogger post with long comment thread
+70e9a381a17a513a,full,drop,C1;C5,"list lead 'We like these, Block Up!' at offset 37; rating chrome '8 / 10' at offset 357; page header 'Want to develop some extra skills?' at offset 0",,"Browser-game listing page: game blurbs with scores, link lists; mostly boilerplate"
 790dae14dbb70fef,full,fix,C1,comment chrome 'X said...' from 6827; 'Linked below:' with link stripped at 8943,,Catholic priest's satirical blog post on a Muslim travel ban plus comments; scanner C2 hits are comment headers
-684fce56bae3e067,,,,,,
-0c7ef4e7b8ea610a,,,,,,
-56cf8c739408c7f8,,,,,,
-b61e52316e59faaa,,,,,,
-f4d4bec60c1bc338,,,,,,
+684fce56bae3e067,full,fix,C1,title line at offset 0; reader comments appended at offset 2689,,"Retro-game review blog; trailing comments; Korean title with fullwidth digit is the real game name, left alone"
+0c7ef4e7b8ea610a,full,fix,C1;C3,photo credit in prose '©NASA Goddard' at offset 218; comment form 'Leave A Response' at offset 10442; sign-off name stripped 'Here’s to finding your true places' at offset 9114,,"Climate-health blog article; byline/date line, photo credits merged, comments; sign-off cut"
+56cf8c739408c7f8,full,fix,C1,"date header 'Sunday, July 17, 2011' at offset 0; date header 'Saturday, July 16, 2011' at offset 5073; sidebar blurb 'Welcome to Gordon's Galaxy!' at offset 18002; byline 'Gordon Long' at offset 17821",,"Blog with several posts (View-Master, Space 1999, book review); date headers and sidebar blurb; children by first name only"
+b61e52316e59faaa,full,fix,C1,date header at offset 0; 'No comments:/Post a Comment' at offset 14473; link titles merged into prose at offset 3482,,Long Microsoft opinion blog; link titles and stub 'Why Touch Screens Will Not Take Over' list merged; footer
+f4d4bec60c1bc338,full,fix,C1,blog tagline 'Spanning the globe' at offset 0; footer 'This page is powered by Blogger' at offset 2231,,Short persuasion/framing blog post
 67c1a78fdeeb020b,full,clean,,,,"UCAS personal statement guide; final sentence complete (no period), C3? rejected"
-cb77f3bf7b3a528a,,,,,,
-87e56bc9a994f254,,,,,,
+cb77f3bf7b3a528a,full,fix,C1,"redirect banner '(redirected from fobbing)' at offset 0; footer 'See also: boat, fresh, off' at offset 290",,"Idiom dictionary entries (fob off); redirect banner and ""See also"" lines, overlapping duplicate senses"
+87e56bc9a994f254,full,fix,C1,date header at offset 0; comment thread starts at offset 1745; 'Please be kind :o)' at offset 5365,,Minimalist-spending blog post with threaded comments
 e68dcb2914953d0b,full,fix,B4,unrendered stat counter '0 growth year on year' at offset 809,,"agency case study for Chef & Brewer pub festivals; C3? rejected, final sentence complete (no period)"
 1992526bd6e98869,full,drop,B4;B2;B1;C1,"Blogger Atom feed metadata 'tag:blogger.com,1999:...' at 0 and between comments; profile URLs at 185; <br /> at 540; &#39; at 1500",,"raw comment feed dump about plastic vs metal miniatures, one line; emails are blogger noreply placeholders, F1 rejected; salvageable only with a feed parser"
-289adac523d90837,,,,,,
-5d51c4fa93622d1b,,,,,,
-4d2bbc4507af6cbe,,,,,,
-1bcdbfae040d734e,,,,,,
-1b74dc6b3d0b7125,,,,,,
-b907cb570bf7895f,,,,,,
-d26cb2c96018385e,,,,,,
-65681546b6461d83,,,,,,
-e1dfc43830d67de9,,,,,,
-a6d472d9e38b2d5d,,,,,,
-d9a8686e6037d9dc,,,,,,
+289adac523d90837,full,fix,C1,title repeated 'We are being pushed to the wall' at offset 33; byline line 'By Abdulmumin Giwa' at offset 65,,Nigerian op-ed with repeated title and byline; one-sided political opinion (not F3)
+5d51c4fa93622d1b,full,fix,C1,"date header 'Tuesday, August 25, 2009' at offset 0; comments '1 comment:' at offset 2556; link text left 'Here's the recipe.' at offset 2536",,Food blog post about frosting; date header and comment chrome
+4d2bbc4507af6cbe,full,fix,A1;C1,U+2028 line separator at offset 562; date header at offset 2; '1 comment:' at offset 3099,U+2028,"Church-reflection blog post plus one reader comment; three LINE SEPARATOR chars (not on A1 list, treated as invisible junk)"
+1bcdbfae040d734e,full,fix,C1,empty comments 'Romantic Guy said...' at offset 1353,,Short budgeting blog post; ends with empty comment stubs
+1b74dc6b3d0b7125,full,clean,,,,"Listicle on online gambling markets; coherent, no boilerplate found"
+b907cb570bf7895f,full,fix,C1,blog header chrome at offset 0; 'Follow Dinar Chronicles by Email' at offset 136; post date/byline at offset 231,,72k-char call transcript from a currency-speculation forum; speculative rather than F3; header chrome then very long body; read fully
+d26cb2c96018385e,full,fix,C1,image captions merged/doubled 'Hokus Poke-UsHokus Poke-Us' at offset 43; link text stripped '(Find Fred' at offset 2779,,"Product blog on toothpick holders; doubled image captions, stripped links"
+65681546b6461d83,full,drop,C5;D4;C1,spam lead 'You're diet soda makes you gain weight about' at offset 33; keyword stuffing 'diet soda makes you gain weight' at offset 6399; fake comments '07.01.2016 at 14:53 Nigrel' at offset 6652; spam teaser 'By: Corey Andalus Feb tenth 2012' at offset 2398,,"Spun diet SEO spam (machine-paraphrased, keyword stuffed) plus fake dated comment stubs"
+e1dfc43830d67de9,full,fix,C1;C3,date header at offset 0; list truncated ('and:' then jump) at offset 402; ends after first safe harbor; 'No comments:' at offset 1048,,Tax-reminder blog post; bullet list broken mid-text and doc stops after safe harbor 1 of 2 (end truncation)
+a6d472d9e38b2d5d,full,fix,C1,"date header 'Wednesday, February 02, 2011' at offset 0; contributor sidebar 'We Are:' at offset 3712; comment chrome 'No comments:' at offset 3796",,Restaurant review (Italian wine blog); business phone in text (not F1); blog chrome
+d9a8686e6037d9dc,full,fix,C1,"date header 'Saturday, March 3, 2012' at offset 0; comment chrome 'You are the cutest mom' at offset 2614",,Mom blog on Valentine day; date header and numbered comments; children by first name
 467b5c0aa1d13de8,full,drop,A3;C1;C5;D3,"keyword 'como ganhar creditos no capoeira fighter 3' injected at offsets 54, 451, 726, 1344...; Cyrillic й for é in 'Diffйrents' at offset 2709; French paragraphs at offset 5038; comment spam block at offset 7912",U+0439,"spun credit-card SEO spam; phone at 5599 is a bank hotline, F1 rejected"
-039f5cd8a6478e42,,,,,,
-2fddba3fc9e15dac,,,,,,
-011c5fa69710197e,,,,,,
-8ff35d8207fce029,,,,,,
-eb137462e26e636f,,,,,,
-d8a9bc7565e56929,,,,,,
-74497dbb0e751a13,,,,,,
-c84f362725cdf249,,,,,,
-d86cd5a0eb38f342,,,,,,
-bcdfc236accdb246,,,,,,
-8500501106228397,,,,,,
-58eba6d8744e9ef6,,,,,,
-931955e6932d4011,,,,,,
-393f4f9d78b0229a,,,,,,
-fdc08d1ba4746e29,,,,,,
+039f5cd8a6478e42,full,clean,,,,"Computer-help service blurb under a name heading; business ad copy, no disease found"
+2fddba3fc9e15dac,full,fix,C1,"date header 'Tuesday, April 11, 2006' at offset 0",,Short blog commentary on disposable Nike shoes; date header
+011c5fa69710197e,full,fix,C1,"date header 'Tuesday, April 10, 2007' at offset 0; link-title lines 'Telegraph - Pilot scheme' at offset 3286; link-title lines 'From Grist - -' at offset 6865",,UK opinion blog with headlines/links left as bare lines (link text stripped); date header
+8ff35d8207fce029,full,fix,C1,date header at offset 0; next post date header at offset 2647; repeated post titles at offset 7607,,"Blog front page with ~20 posts (art diary, then childhood story with notes); date headers and post titles; NBSP widespread"
+eb137462e26e636f,full,fix,C1,comment form 'Leave a Reply' at offset 6555,,Op-ed on Eid hide donations; public author byline; comment footer
+d8a9bc7565e56929,full,fix,C1,"date header 'Friday, November 22, 2013' at offset 0; stripped links 'Purchase links' at offset 2461; comment chrome 'Thank you for taking the time' at offset 2483",,"Book review blog post; date header, ""Purchase links"" stub, comments"
+74497dbb0e751a13,full,drop,C5;D4;C1,keyword-stuffed phrase repeated at offset 59; spam comment stubs at offset 5148,,"Spun divorce-SEO article with stuffed phrase and unrelated sentences (photographer, annulment); spam comments"
+c84f362725cdf249,full,fix,C1;H3,related link 'RELATED: Showtime' at offset 293; wire credit 'Associated Press' at offset 2862; unrelated headlines tail 'Wintry Precipitation Arrives' at offset 2883,,"AP wire story on Falcon Heavy launch (lede missing); timestamp, related link, trailing headlines"
+d86cd5a0eb38f342,full,fix,C1,stage header 'Stage: Earth' at offset 0,,Festival DJ lineup blurb; stage header; mentions promoters by first name only
+bcdfc236accdb246,full,clean,,,,"Short venue-promotion blurb for a NZ lodge; coherent, no disease found"
+8500501106228397,full,fix,C1,"date header 'Thursday, 3 July 2014' at offset 0",,Opinion piece on Turkish presidential election; date header
+58eba6d8744e9ef6,full,clean,,,,Pre-operative instructions list from a clinic; no boilerplate found
+931955e6932d4011,full,fix,C1;C3,sentence cut ('is not' then new paragraph) at offset 314; image reference 'The image to the left' at offset 18,,Coin-collecting definition snippet; mid-text cut and hard line wraps; refers to a missing image (C3 mid-text)
+393f4f9d78b0229a,full,drop,C1;C2,web-design footer '- dynamic website design' at offset 492; conflicting duplicate price line 'NOW £14' at offset 481,,Shoe product-listing stub with duplicated price lines and footer (unsure drop vs fix)
+fdc08d1ba4746e29,full,fix,C1,widget 'Submitted by a LOZO expert' at offset 33; login chrome 'Login now' at offset 98; footer 'User Comments' at offset 588,,Money-saving tip page (cost per wear); site chrome around a short tip
 c61b9f74285b9f65,full,drop,F3,escort profile text from offset 19; stats line 'Age: 22 | Bust: C | Size: 8' at 268,,"adult escort-service advertisement; F3 is a judgement call; C3? rejected, stats line is complete"
-b1991c8b39e58191,,,,,,
+b1991c8b39e58191,full,fix,C1,closing call-to-action link at offset 2500,,Egypt Independent feature on a book-bike cart; only trailing 'check them out' link line to strip
 c98d61fbe3ef9c3d,full,fix,C1;C2,'Click to read more ...' x4 from offset 395,,food blog front page: teaser excerpts then a full 'Food Questions' post
 28bd69b4ed987643,full,fix,C1;C2,"'Choose a category to find the help you need' at offset 0; 'Are the price rates negotiable?' Q/A repeated at offsets 4405, 5139, 5218",,"FAQ page for an Indian tour-guide app; phone is a business missed-call number, not F1"
-b186cb310251a508,,,,,,
+b186cb310251a508,full,fix,C1,"date header 'Saturday, June 28, 2014' at offset 0; second post header 'Wednesday, June 25, 2014' at offset 408",,"Craft blog, three posts under date headers (not treated as C4)"
 f4e27249dc2787fc,full,fix,A1,LRE U+202A at offset 90 after 'Practice with intent.',U+202A,listicle of 33 guitar-practice/songwriting tips; mild profanity
-21a5353274189f61,,,,,,
-063df7cbc6cb95bc,,,,,,
-4eed925d787ae5d0,,,,,,
-ec5460962f3c6ad1,,,,,,
-a55992c7a90ce4f4,,,,,,
-69621caaf4c0833b,,,,,,
-3eb154043e35afb7,,,,,,
-80dbb90e43c443b4,,,,,,
-2f4e718a130571c8,,,,,,
-1f95702836378019,,,,,,
-3caaad47ab73bdb6,,,,,,
-8a7b6e90a1b41eb8,,,,,,
-19c051aefe84b262,,,,,,
-d27b292624086b19,,,,,,
-42f9d891adc96acb,,,,,,
-1a1078870aa6c149,,,,,,
-223c75d5ee536452,,,,,,
-16b8edde6fecc6ce,,,,,,
-5922ba20491d8f57,,,,,,
-32aff3694119740d,,,,,,
-896c16a733dfd0e6,,,,,,
-34615cb7df688dc8,,,,,,
-dede015abe25b6a1,,,,,,
-9feb439060f63c67,,,,,,
-ece8c5ef5f5b8399,,,,,,
-12d8c9d6756a4e16,,,,,,
-eba894c1f7cb6a1d,,,,,,
-0e064ed012ae2caf,,,,,,
-083f919b3429110a,,,,,,
-e9253d74098f4f78,,,,,,
-7fba65ecd9ef1d14,,,,,,
-e0f442fd5ef88c60,,,,,,
-1eabfe8ac5d3b5cb,,,,,,
-023b7b588cc65ebc,,,,,,
-0a254925b0ff1599,,,,,,
-325f79f5f47bfaa0,,,,,,
-ce9d6eb44a6b8d2d,,,,,,
-569d0d2685634869,,,,,,
-f4cc9de98a7e85b2,,,,,,
+21a5353274189f61,full,clean,,,,"Pizzeria business description; promotional but coherent prose, no chrome (multi-space typo only)"
+063df7cbc6cb95bc,full,fix,C1,date header at offset 0; comment list starts at offset 1666,,Family sewing blog (written in a baby's voice) with captions between photos and 5 comments
+4eed925d787ae5d0,full,fix,C1;D3,"Indonesian date header 'Kamis, 27 Maret 2014' at offset 0; Indonesian comment chrome 'Tidak ada komentar' at offset 1175",,Short blog on nuclear power; Indonesian blogger UI strings
+ec5460962f3c6ad1,full,fix,C1,"date header 'Monday, August 19, 2013' at offset 0; date header 'Monday, March 28, 2011' at offset 3813; date header 'Saturday, March 5, 2011' at offset 7851",,Blogger multi-post dump with date headers; ABC meme post has self-disclosed city/age/mom first name (not contact data)
+a55992c7a90ce4f4,full,drop,C5;D4;C1,keyword phrase stuffed at offset 47; spam comments at offset 3658; 'Recent Posts / External Sources' at offset 4004,,"Spun astrology SEO text with stuffed keyword and unrelated sentences (gold, Obama, WoW); spam comments"
+69621caaf4c0833b,full,fix,C1;C3,comment chrome 'The story is too old to be commented.' at offset 369; comment cut mid-sentence 'I'm still waiting for my cross chat and' at offset 808; chrome 'Show all comments (33)' at offset 9312,,Gaming-site news stub plus long comment thread; vote/age chrome; one comment cut
+3eb154043e35afb7,full,fix,C1,comment chrome 'The story is too old to be commented.' at offset 121; comment chrome 'yokokoroma2237d ago' at offset 159,,"Game news teaser plus one comment with title list; short, mostly chrome"
+80dbb90e43c443b4,full,drop,C5;D4;A1;C1,keyword-stuffed title phrase mid-sentence at offset 2424; LRM U+200E at offset 2574; 'Add a comment' at offset 3105,U+200E,"Fitness SEO spam scraped from forum snippets and ads, stuffed query phrase; LEFT-TO-RIGHT MARK x2"
+2f4e718a130571c8,full,fix,C1,"date header 'Monday, 19 September 2016' at offset 0; photo captions list 'Prussian light cavalry begin their flank' at offset 3316; comment chrome '1 comment:' at offset 4455",,Wargame battle report; ~25 photo captions merged at end
+1f95702836378019,full,fix,C1,site chrome 'error: Content is protected !!' at offset 4111,,Colon cleansing promo article; trailing site-protection message
+3caaad47ab73bdb6,full,clean,,,,"Design-case blurb on a Swedish cooperative brand; Swedish phrase is quoted and translated, no disease found"
+8a7b6e90a1b41eb8,full,drop,C1,"date header 'Thursday, July 17, 2014' at offset 0; comments 'Anonymous said...' at offset 115",,Image-only blog post stub with two brief comments
+19c051aefe84b262,full,fix,C1,"date header 'Friday, February 16, 2007' at offset 0; comment chrome 'Hinano said...' at offset 545",,Anime blog post with comments
+d27b292624086b19,full,fix,C1,date header at offset 0; comments start at offset 1977,,Short urban-waste blog post with two comments (commenter names are blog handles)
+42f9d891adc96acb,full,drop,C1;D3;D4;C3,"sidebar chrome 'Search This Blog' at offset 0; MT of letter 'Dear Mr. M.,Your request' at offset 909; German original cut mid-sentence 'weniger als 10' at offset 7418; footer 'Blog Archive' at offset 8018",,"Cloudbusting blog letter: garbled machine-translated English then German original (cut), blog sidebar chrome"
+1a1078870aa6c149,full,fix,C1;D3,title echo 'orio shuttle' at offset 0; Italian heading 'Orioshuttle sbarca su Google Maps!' at offset 46,,Shuttle service announcement; title repeated as heading; natural English/Italian heading
+223c75d5ee536452,full,fix,C1,date header at offset 0; comments start at offset 863,,Student blog paragraph on the Opium Wars (refers to a missing political cartoon) plus 3 comments
+16b8edde6fecc6ce,full,fix,C1;C3,"date header 'Tuesday, June 18, 2013' at offset 0; quoted wiki text stripped 'wiki descriptions like the following' at offset 3750; spam comment 'Quantum Binary Signals' at offset 17046",,Kdrama blog post with long comment thread; stripped quote; ends with ad-spam comment
+5922ba20491d8f57,full,fix,C1,"date header 'Friday, March 16, 2012' at offset 0; comment chrome 'Liz said...' at offset 2568",,Personal blog on a lab injury; date header and comments
+32aff3694119740d,full,fix,C1;C3,'PMW Bulletins' / 'Share |' at offset 38; footer 'Previous Bulletin Next Bulletin' at offset 2508; link text stripped 'can be seen here' at offset 475,,"PMW bulletin reporting a blood-libel lecture (reporting, not F3); nav chrome; link anchors removed"
+896c16a733dfd0e6,full,fix,C1,header nav 'Bill Thayer' at offset 1; nav alt text '[image ALT: link to previous section]' at offset 100; page marker inline 'p135' at offset 501; editor note 'Thayer's Note:' at offset 157125; footer 'Page updated' at offset 157318,,"Very long public-domain book chapter (Mackenzie of Canada) on a transcription site; nav, inline page numbers, image ALT text, footnote"
+34615cb7df688dc8,full,fix,C1;C3,"permalink chrome 'Date/Time Permalink' at offset 19; sharing chrome 'Stumble it Reddit' at offset 1715; footer 'suddenly the moon' at offset 1757; quote stripped, starts mid-sentence 'and AIM's advanced security features' at offset 474",,"Tech humour post on AOL SDK; quoted article parts stripped (C3 mid-text), meta lines and footer"
+dede015abe25b6a1,full,fix,C1,'Date/Time Permalink' metadata at offset 78; share-links line at offset 5117; next-post title at offset 5159,,Humor sketch 'How Not To Be a Geek' from a personal site; blog metadata and share links around it
+9feb439060f63c67,full,fix,C1,post metadata 'Date/Time Permalink' at offset 87; share links 'Stumble it Reddit' at offset 2024; trailing sidebar text 'suddenly the moon' at offset 2066,,"Open-source blog post about OpenSolaris; header joke, share links"
+ece8c5ef5f5b8399,full,fix,C1,date line '17 Jan. 2018' at offset 41; empty byline 'Article author:' at offset 5406,,HR consultancy article on workplace wellbeing; date line and empty author footer; company promo
+12d8c9d6756a4e16,full,drop,C1;D3,Romanian date header at offset 0; Romanian comment footer at offset 264,,"Four-line song-lyric post on a Blogger page with Romanian chrome; stub, no prose"
+eba894c1f7cb6a1d,full,clean,,,,Short summer nature blog poem with scripture quote; no issues found
+0e064ed012ae2caf,full,fix,C3;C1;H3,"starts mid-story 'The party, which initially planned' at offset 0; footer 'Latest News from State News Desk' at offset 1511",,"Indian news wire (PTI-style) story on Uttarakhand crisis; lead paragraph missing (C3 start); H3 is a guess, unverified"
+083f919b3429110a,full,fix,C1,post date line at offset 37; second post title/date at offset 964,,Two short personal blog posts joined (C1 here = post titles/dates); 'Feature is on its way' looks like a mangled quote
+e9253d74098f4f78,full,fix,C1,"date header 'Tuesday, July 8, 2008' at offset 0; comments 'Courtney said...' at offset 1925",,Fertility blog on progesterone; comments appended
+7fba65ecd9ef1d14,full,fix,C1,trailing link text 'Why ECO - online world' at offset 624,,Short ECO MOOC project blurb; trailing link text
+e0f442fd5ef88c60,full,fix,C1;C3;H3,"'Originally published' header at offset 64; sentence cut 'To see more, visit' at offset 133; transcript footer at offset 5272",,"NPR All Things Considered transcript, copyright wire/broadcast copy; URL stripped; laughter/applause lines emptied"
+1eabfe8ac5d3b5cb,full,drop,C2;C4;C1;C3,"date header 'Sunday, April 26, 2009' at offset 0; same quote repeated 'You were tied to a stake' at offset 11497; different show joined 'You know what I like about butterflies?' at offset 27672; cut mid-sentence then new quote block 'I guess I should have kept a blog, becau' at offset 27610",,"Quote dump from Smallville then Yu-Gi-Oh etc.; quotes repeated, shows joined, a quote cut off"
+023b7b588cc65ebc,full,fix,C1;C3,"header 'Aug 22, 2017' at offset 32; header 'Originally published on August 22, 2017' at offset 45; cut footer 'Copyright 2017 NPR' at offset 4298",,NPR commentary on Nazis and US science; date headers; copyright footer cut mid-phrase; byline missing
+0a254925b0ff1599,full,fix,C1;C3,'Print Recipe' at offset 0; empty 'Recipe Ingredients' list at offset 53; footer 'Always Open! To our Visitors' at offset 597,,"Cookie recipe: ingredient list is missing (C3 mid-text), plus site footer"
+325f79f5f47bfaa0,full,fix,C1;C3,"date header 'Monday, February 1, 2010' at offset 0; embedded article stripped 'will not:' at offset 2079; comments 'notjustlaura said...' at offset 4431",,Opinion blog post on marriage with comments; controversial opinion only (not F3); embed missing
+ce9d6eb44a6b8d2d,full,drop,C5;D4,title echoed in spam prose 'musica de reiki+imagenes' at offset 944; spun gibberish 'Once this happen?' at offset 281,,"Spun nonsense about reiki, keyword-stuffed with title phrase"
+569d0d2685634869,full,fix,C1;C3,verse missing after 'Notice the phrase' at offset 2713; newsletter signup footer at offset 3797,,Devotional article; scripture block stripped mid-text; signup footer; 'lifeonly' missing space
+f4cc9de98a7e85b2,full,fix,C1,page timestamp header 'Facility Designs 2018-02-15T12:16:04+00:' at offset 0; site promo 'You can also find additional information' at offset 1663,,Cannabis facility-design company page; timestamp header and blog promo
 8c4dfd57d9b597fd,full,fix,C1,'Share on' at 98 and 5209; 'Published 4th August 2016' at 5219; title duplicated at 0,,magazine article on handcrafting in luxury cars
-c916841af90359f9,,,,,,
-c966bc734ec839f8,,,,,,
+c916841af90359f9,full,drop,C5;D4,spam link phrase 'Visit link builder to learn where to flirt with it' at offset 202; spam link phrase 'Browse here at seo outsourcing' at offset 1103,,"Synonym-spun SEO article with injected link anchors (""flirt with"" for ""play with"")"
+c966bc734ec839f8,full,clean,,,,"Newspaper counselor column about Santa; read fully, no boilerplate or damage found"
 68575a61a90990d5,full,drop,A1;A3;C1;C2;C4;C5;D3,symbol-font gibberish at offset 941 (soft hyphens x13 inside); 'Pokйmon' at offset 1465; German at offset 1559; 'Trading system excel download' x4 from offset 24; binary-options ad block at offset 90; reviews/payout table at offset 30662,U+00AD; U+0439,"binary-options spam built from random textbook snippets; A5 hit at 992 is inside gibberish, moot"
-76a92e2254e28115,,,,,,
-1f7b29a4694eaf3e,,,,,,
-340e1023485e84aa,,,,,,
+76a92e2254e28115,full,fix,C1;D3,French date header 'lundi 24 mai 2010' at offset 0; French passage with English translation 'Mais pour Hélène' at offset 6031; empty post 'samedi 15 mai 2010' at offset 7957,,"Expat blog, several posts joined; French quotes and French post (natural code-switching)"
+1f7b29a4694eaf3e,full,fix,C1,"date header 'August 13, 2007' at offset 0",,"Political blog post quoting a news article on Hizbullah land buying; opinion, not F3"
+340e1023485e84aa,full,fix,C1,forum breadcrumb at offset 39; topic metadata at offset 110; login prompt at offset 1356,,"Single forum post about changing beliefs, with breadcrumb/metadata/login chrome; typos are the writer's own"
 2d251d751db8ec5f,full,fix,C1,'Click to get the gist' in title at offset 43; stray '©' at 1036; 'Leave a Reply' at 1409,,"Nigerian celebrity gossip piece about Big Brother Naija; rough grammar is natural, not MT"
-a95be3d7a3b35c0c,,,,,,
-aa68190468efbbdc,,,,,,
-4398cd48687a46fb,,,,,,
-9f15a0b579aa1d41,,,,,,
-0f638730dd60630e,,,,,,
-b5355111e78b170f,,,,,,
-15a1851e19a2c524,,,,,,
-89f4b785d08bd32d,,,,,,
-151e2588446307e2,,,,,,
-cb52f08275493a11,,,,,,
-3f47343c139d2fa4,,,,,,
-7bdfc5a0cdd2552d,,,,,,
+a95be3d7a3b35c0c,full,drop,C1,CTA 'Start Your Estimate' at offset 324,,Short product teaser (conveyor drive) with CTA only
+aa68190468efbbdc,full,fix,C1,"date header 'Tuesday, July 21, 2009' at offset 0; footer 'No comments:' at offset 2722",,Opinion blog on healthcare reform; date header and comment footer
+4398cd48687a46fb,full,fix,C1;C3,date header at offset 0; cut mid-sentence 'what is' at offset 1855; cut mid-sentence 'YOUR' at offset 3974; footer recommendation at offset 4558,,Channelled-teaching transcript with hard line wraps; two sentences cut mid-text; footer link
+9f15a0b579aa1d41,full,fix,C1,stray name header 'Phil Bates' at offset 0; image credit 'Image: Source' at offset 1688,,"Short NFL training-camp news; stray name at start, image credit at end"
+0f638730dd60630e,full,fix,C1,inline related link 'MORE: Why the undefeated Chiefs' at offset 380; footer 'Fresh Off The Wire' at offset 2374,,"NFL opinion column on the Chiefs; inline ""MORE:"" link text and trailing section label"
+b5355111e78b170f,full,fix,C3,first letter lost 'nternational' at offset 0,,"Short poem; title lost its first letter (cut at start); unsure if worth keeping, parentheses left open on purpose"
+15a1851e19a2c524,full,fix,C1,byline stripped 'By :' at offset 39; author box 'About Doug Mortimer' at offset 9069; comment chrome 'No comments:' at offset 9091,,"Opinion piece on H-1B and men; date header, empty byline, comment footer"
+89f4b785d08bd32d,full,clean,,,,"Philosophy essay on novelty; hard line breaks mid-sentence in a few places, not a listed disease"
+151e2588446307e2,full,fix,C1,date header at offset 0; comments start at offset 1266,,Humorous blog anecdote with 6 comments; blogger name is a handle
+cb52f08275493a11,full,fix,C1,image caption at start 'Pucker Meter' at offset 0,,Motorcycle rider-training promo; image caption at start; business promo (Jon is the business owner)
+3f47343c139d2fa4,full,fix,C1,"title echo 'giving feedback' at offset 0; date 'March 11, 2010' at offset 17; footer 'Permalink Print' at offset 2758",,"Management article on feedback; title repeated, date, permalink footer"
+7bdfc5a0cdd2552d,full,fix,C1;D3;F1,category line at offset 0; WhatsApp number of a private distributor at offset 2253; Malay footer at offset 2310,,"Shaklee MLM promo quoting its CEO, with a distributor contact line and Malay footer; promotional but readable"
 c20aa9c003ae30c4,full,fix,C1,link-up comments 'Stunning photos as usual... #countrykids' from offset 1352,,"Brisbane daily-photo blog post; scanner C3? rejected, final comment is complete"
-a9fd65a01b9629c3,,,,,,
-dd707bcbde2b63d0,,,,,,
-61cd6e76104f9bb3,,,,,,
-c36790313f5ec452,,,,,,
-0a28e7f42a4bba02,,,,,,
-0b8927b848a57933,,,,,,
-1241617d2b2e6377,,,,,,
-2f7d4c43cfe55f59,,,,,,
-9c4536a550f26b6f,,,,,,
-ef398a40526f946c,,,,,,
+a9fd65a01b9629c3,full,fix,C1;H3,clipping chrome 'clipped from' at offset 913; pasted Wikipedia text with citation numbers 'From wikipedia' at offset 1038; chrome 'blog it' at offset 4154; footer 'Enhanced by Zemanta' at offset 4388,,"Blog on star and crescent symbol; large verbatim Wikipedia paste with [n] refs, clipping chrome"
+dd707bcbde2b63d0,full,fix,C1,"header links 'News from the Pipemaking Workshop' at offset 0; date header 'Thursday, January 28, 2016' at offset 113; stripped photo caption 'Drilling angles, and a very basic idea of the shape size:' at offset 1216",,Pipe-making tutorial post; photo captions left as colon-ended lines; header links
+61cd6e76104f9bb3,full,drop,C1,'story is too old to be commented' at offset 34; comment threads at offset 72,,Only a headline plus three site comments; no article body (stub)
+c36790313f5ec452,full,fix,C1,"date header 'Friday, April 3, 2009' at offset 0; comment chrome 'No comments:' at offset 995",,Short baseball blog post
+0a28e7f42a4bba02,full,drop,C5;D4;C1,spam header 'Write My Essay!' at offset 0; spam link line 'Need an expert writer?' at offset 4048; spam footer '© 1999 - 2017 termpapers.date' at offset 4378,,Essay-mill spam: word-salad paragraph plus link list and footer
+0b8927b848a57933,full,fix,C1,date header at offset 0; comments start at offset 2455,,Software tester blog post with two comments; fine prose
+1241617d2b2e6377,full,fix,C1,issue header 'In this issue' at offset 0; social icon label 'Twitter icon' at offset 145; photo credit 'Eddy house photo by the author.' at offset 6698,,"Magazine feature on the Eddy brothers; header chrome, photo credit"
+2f7d4c43cfe55f59,full,fix,C1,"date header 'Thursday, June 07, 2007' at offset 0; comment chrome 'Peggy said...' at offset 5180",,"Cyprus travel blog day 5; date header, comments"
+9c4536a550f26b6f,full,fix,C1,related-links block at offset 1704,,Music-news article with press-release quotes; three related-link titles at the end
+ef398a40526f946c,full,fix,C1,"date header 'Sunday, November 13, 2011' at offset 0; comment chrome 'No comments:' at offset 3516",,Opinion blog on Penn State scandal
 7fb1c89fcfeceb5d,full,fix,C1,'Click to comment' at offset 5608; 'Leave a Reply' / 'To Top' at offset 5642,,listicle on succeeding in the music industry; section headings stripped
 5d1fd12b101321f0,full,fix,A2;A3;C1,"'artistÂ\x92s' at offset 12598 (CP1252 apostrophe double-decoded); Blogger comment chrome 'Anonymous Anonymous said...' at 13065 (NBSP-joined) and 13120, 'Post a Comment' 13231, 'Links to this post' 13247, '<< Home' 13283",U+00C2 U+0092,art-project blog: model Q&A about an experimental life-drawing session in a paper shed; nudity discussed non-sexually
 1e13b455581e96ca,full,fix,C2;C1,"'(Photo Credit: Yong Kai Jie)' x4 from 4076, broken '(Photo Credit:' at 991; 'No comments:'/'Post a Comment' at 5741",,student blog post about attending an Iftar in Manchester
-97b0833c788f79b2,,,,,,
-cdb3abbad7f8c935,,,,,,
-da38803ed868cd9a,,,,,,
+97b0833c788f79b2,full,fix,C1,"date header 'Sunday, January 18, 2015' at offset 0",,Short horror story (fiction) on a blog; date header only
+cdb3abbad7f8c935,full,fix,C1,date header at offset 0; deleted-comment notice at offset 2180; comments start at offset 2235,,"Opinion blog on the FLDS custody case (controversial, not F3); comments and removed-comment notice"
+da38803ed868cd9a,full,fix,C1,"date header 'Monday, March 22, 2010' at offset 0; comments 'ElegantSnobbery said...' at offset 1447",,Personal blog post; comments appended
 11c3cd0e50856c3e,full,fix,A1;C1,ZWSP at offsets 0 and 318; 'Like this post? Share it on facebook!' at offset 1395; two comments appended,U+200B,household efficiency blog post
-35d00d2a930d794d,,,,,,
-83efd6869cb74bd4,,,,,,
-1187711dd37db92b,,,,,,
-0cf589a85ddcf20b,,,,,,
-319afcfc2bbab65b,,,,,,
-5d9b71df6042adb7,,,,,,
+35d00d2a930d794d,full,fix,C1,"date header 'Tuesday, May 7, 2013' at offset 0; caption merged 'Our space for the journey.' at offset 2006; footer 'No comments:' at offset 11568",,Indonesia travel blog post; photo captions merged into prose; comment footer
+83efd6869cb74bd4,full,fix,C1;C3;D4,date header at offset 0; link text cut 'What Are QR Codes' at offset 108; spinner artifacts 'Once you have You have to scanned' at offset 804,,QR-code security blog post; one stripped link (C3 mid-text) and several spinner-style garbled phrases
+1187711dd37db92b,full,fix,C1;C3,site name stripped 'my ban from that' at offset 130; login chrome 'No account? Create an account' at offset 5615,,LiveJournal rant about forum ban; forum name removed; login footer
+0cf589a85ddcf20b,full,fix,C1;C3,starts mid-word 'h Chaotic Sword God Chapter 1033' at offset 0; site tag 'Chaotic Sword God - TopLightNovels.com' at offset 133; footer 'Click Like and comment to support us!' at offset 7092; footer 'About Chaotic Sword God Chapter 1033' at offset 7178,,"Web-novel chapter; title repeated 3x, lead cut (""h Chaotic...""), site footer lines"
+319afcfc2bbab65b,full,drop,C1,'Related Articles' header at offset 0; 'Leave A Comment?' at offset 1614,,"Only reader comments from a Windows UAC tutorial (article body absent); commenters named, not F1"
+5d9b71df6042adb7,full,fix,C1;C3,link text stripped 'Read the shit here:' at offset 798; comment chrome 'No comments:' at offset 2859,,"Political rant blog; stripped link; opinion (profanity/controversy only, not F3)"
 21c5f73cf737e6f6,full,fix,C1,garbled date 'Dec 132016' at offset 0; duplicated title at 11/44; comment chrome '• ChuckNoland' at 4574,,"shop-owner interview, New Orleans wine store; scanner F1 phone at 4554 rejected: business number and address"
-92bac3ec406c4344,,,,,,
-25539372c6002927,,,,,,
-2c170d56104265c9,,,,,,
-d0f7dcc2e1a719de,,,,,,
-b1aab2650228b1d1,,,,,,
-12c8bfa031e6158f,,,,,,
+92bac3ec406c4344,full,fix,C1,"date header 'Wednesday, August 10, 2011' at offset 0; date header 'Wednesday, February 23, 2011' at offset 2222",,"Gaming blog (Dragon Age, Sims tutorial); date headers, image captions as bare lines"
+25539372c6002927,full,clean,,,,Local auto-shop services blurb under a SEO-style page title; no disease found
+2c170d56104265c9,full,fix,C1,"date header 'Wednesday, March 17, 2010' at offset 0; comment chrome 'Post a Comment' at offset 3765",,Author blog on writing Latino characters
+d0f7dcc2e1a719de,full,fix,C1,"date header 'Thursday, December 24, 2009' at offset 0; footer 'Disclosure Policy' at offset 2071",,"Short moral story on a blog; date header, footer link, indented lines"
+b1aab2650228b1d1,full,fix,C1,related-links sentence at offset 1225; 'Leave a Reply' at offset 1341,,Short humor post about a Seinfeld comic; images missing between paragraphs; footer and related titles merged
+12c8bfa031e6158f,full,fix,C1;C3,"headline block 'Emma Haugh | The Joinery' at offset 28; footnote source stripped 'Source:' at offset 12291; link stripped 'More info here -' at offset 13052; exhibition credit tail 'The Joinery, Arbour Hill' at offset 13156",,"Art essay on Emma Haugh exhibition; byline/caption header, footnotes with stripped links"
 7b1d879aa4e04769,full,drop,A3;A2;C3,"mojibake a-circumflex euro sequences throughout from offset 554 (52 hits); U+009D x14 from 1653; stray '<' at end 10474 and reference list missing items 6,8,10,11",U+00E2 U+20AC U+201D; U+009D,"vet article on ovary removal and longevity; good prose but double-encoded throughout, ftfy would repair it"
-51a963459683cb42,,,,,,
-8e0d5cc62401e197,,,,,,
-c4c095e15fafdd95,,,,,,
-bd9e4bcdf3a71cc0,,,,,,
-9f6971e84c472fbb,,,,,,
+51a963459683cb42,full,fix,C1,site title 'Western Rifle Shooters Association' at offset 0; comment chrome 'Defender said...' at offset 1159; footer 'Subscribe to Post Comments' at offset 9544,,"Militia-minded blog post and comments; heated talk of violence, treated as opinion (unsure on F3)"
+8e0d5cc62401e197,full,fix,C1,date header at offset 0; deleted-comment notice at offset 1676; odd inserted token 'Peanut Butter' at offset 2132,,Mom-runner blog post with 6 comments; one comment has a stray substituted word
+c4c095e15fafdd95,full,fix,C1,app promo 'FREE - On Google Play' at offset 0,,Clickbait listicle of husbands quotes; app promo header
+bd9e4bcdf3a71cc0,full,fix,C1,caption merged 'A permanent fish ladder at the John Day Dam.' at offset 220; footer 'Leave a Reply' at offset 709,,"Short fish ladder encyclopedic text; captions merged, footer"
+9f6971e84c472fbb,full,fix,C1,'Link to Springer' at offset 1475; title repeated at offset 165,,Publisher blurb for an edited sturgeon book; title repeated and trailing link
 51a6eba698d6365e,full,fix,B4;C1,"'+ Universal App / FREE! Buy now!' at offset 12; 'Share This:' at offsets 169, 3325; star-rating alt text 'starstarstarhalfstarblankstar' at offsets 117-463",,mobile game review (ENYO); 'Tinytouchtalesis' at 494 lost a space when a link was stripped
-b612431bc1ffadd2,,,,,,
-23e08a29622ba087,,,,,,
-0b45e83873b13401,,,,,,
-305e03c9bac7556d,,,,,,
+b612431bc1ffadd2,full,fix,B4;C1;H3,SSI error marker '[an error occurred while processing this' at offset 0; second marker '[an error occurred while processing this' at offset 3515; timestamp '07:20 PM ET 12/28/98' at offset 52,,1998 wire-style science story on telomerase (likely syndicated; H3 unsure); SSI error text
+23e08a29622ba087,full,clean,,,,Album review of The Black-Eyed Snakes; no boilerplate found
+0b45e83873b13401,full,fix,C1,"empty byline 'By , agencyfaqs! | In |' at offset 33; standfirst repeated as first paragraph at offset 281; 'Search Tags' / copyright footer at offset 4312",,"agencyfaqs trade article on a film campaign, 2004; names in byline stripped, tail chrome; quoted executives are public figures"
+305e03c9bac7556d,full,drop,C1,menu 'Help and Tips' at offset 0; widget 'This day in history' at offset 416,,Anne Frank site help menu and date widget; no prose
 6f99bfbd4bf12311,full,fix,A1;C1;C3,BOM at offset 0; header 'Edmonton Astrological Society Since 1977' at 20; ends on 'reflected by the planet:' at 1631 with the list missing,U+FEFF,horary astrology tips page; truncated before the planet list
-9397c918c18821cc,,,,,,
-4604ff07ce10fedb,,,,,,
-e0a177b7f0872951,,,,,,
-f18b3d4f77d47002,,,,,,
-4798c43f71c36474,,,,,,
+9397c918c18821cc,full,clean,,,,"Clinic page on EPAT therapy; business promo with doctor names (public), no chrome"
+4604ff07ce10fedb,full,clean,,,,"Wrestling Olympic Trials opinion piece; read fully, no disease found (leading blank lines only)"
+e0a177b7f0872951,full,drop,C1;C3,truncated teaser 'It is not entirely clear what the... rea' at offset 689; widget 'News Widget for Webmasters' at offset 807; calendar 'Mo Tu We Th Fr Sa Su' at offset 851,,Daily Mail teaser stub with widgets and calendar
+f18b3d4f77d47002,full,fix,C1;C3,nav '« Previous story' at offset 34; meta 'Posted in the burner | 12 comments' at offset 3760; comment form 'Add new comment' at offset 7497; link text stripped 'sentencing phase if Bergdahl is convicted (from' at offset 3180; text cut mid-comment 'collude with the didn't work out' at offset 3885,,News blog on Bergdahl trial with quoted wire text and comments; links and a comment cut mid-sentence
+4798c43f71c36474,full,drop,C4;C5;D4,unrelated topic switch to survival kits at offset 3029; unrelated topic switch to saunas at offset 5938; 'Caribbean Australia' nonsense at offset 1680,,"Spun SEO filler stitched from unrelated topics (shuffleboard, survival kit, saunas) with factual nonsense"
