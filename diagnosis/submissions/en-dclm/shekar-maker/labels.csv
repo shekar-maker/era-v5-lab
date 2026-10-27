@@ -5,7 +5,7 @@ f8c5b8c83dd28f1d,full,clean,,,,four-line stub quoting a Norwegian dance crew's w
 e9f7ef33507c3bc6,full,drop,C5;D3;C1,Spanish keyword 'pigmentacion capilar Marbella' injected at 1794 and after; spun HSA text; 'Reader Comments' header at 0; spam footer 'If you beloved this article' at 4028,,"spam comment on a news site, spun health-insurance text with hair-tattoo keywords"
 a1b97fd910707a8d,full,fix,C3,sentences cut where link text was stripped: 'I can't even find a link from' at offset 4095; 'Here is a picture from' at 17134; 'since 1968. reports total' at 18453; 'I'm not one' at 20360,,"Canadian aviation blog, Jan 2005 archive; good prose; C1? hit 'Fortune Cookie Wisdom' rejected (post title)"
 089fde49e557cc5d,full,fix,C3,ends with heading 'Female Problems' and no body at offset 28738; embedded media missing e.g. 'Here's a live human reading the ATIS:' at offset 22826 followed by nothing,,"aviation blog archive page, several dated posts; one post (Oct 07) has no title"
-6.46076E+15,full,fix,C4,paragraph on APDSC (0-192) followed by unrelated I.C.C.D. deaf chess paragraph at offset 193 with no boundary,,two organisation blurbs stitched together; very short
+6460755981418292,full,fix,C4,paragraph on APDSC (0-192) followed by unrelated I.C.C.D. deaf chess paragraph at offset 193 with no boundary,,two organisation blurbs stitched together; very short
 b9fcad1830a5db44,full,fix,D3;C1,Urdu/Arabic terms in English prose e.g. 'did naseehat' at 1281; 'Copyright (c) 2013 Alavibohra.org' at 3063,,"community report on a children's handwriting/drawing contest; lists child winners by name only, no contact data"
 50d363e8b8340b11,full,fix,C2,"'never quiet, never soft.....' sign-off x21 from offset 2715; 'check the teleport:' x~20 from offset 1113",,"vegan food/tattoo-artist daily blog archive, ~20 posts; scanner C1? hits are real prose, rejected"
 b19371a31d9aed81,full,clean,,,,"conference announcement + speaker list; scanner email hit at 920 is an institutional mailbox, F1 rejected"
@@ -381,7 +381,7 @@ d8a9bc7565e56929,,,,,,
 c84f362725cdf249,,,,,,
 d86cd5a0eb38f342,,,,,,
 bcdfc236accdb246,,,,,,
-8.5005E+15,,,,,,
+8500501106228397,,,,,,
 58eba6d8744e9ef6,,,,,,
 931955e6932d4011,,,,,,
 393f4f9d78b0229a,,,,,,
